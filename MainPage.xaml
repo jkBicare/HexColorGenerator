@@ -1,0 +1,163 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HexColorGenerator.MainPage"
+             Loaded="ContentPage_Loaded"
+             BackgroundImageSource="Resources/Images/bricksbg.jpg">
+
+    <ContentPage.Resources>
+        <Color x:Key="Primary">#181C14</Color>
+        <Color x:Key="Secondary">#3C3D37</Color>
+        <Color x:Key="Tertiary">#ECDFCC</Color>
+    </ContentPage.Resources>
+
+    <VerticalStackLayout HorizontalOptions="Fill"
+                       VerticalOptions="Start">
+
+        <Grid>
+
+            <Image Source="lableboard.png"
+                 MaximumHeightRequest="80"
+                 Aspect="AspectFill"
+                 HorizontalOptions="Center"
+                 VerticalOptions="Center"/>
+            <Label HorizontalOptions="Center"
+                 VerticalOptions="Center"
+                 FontFamily="MedievalSharp"
+                 FontSize="24"
+                 FontAttributes="Bold"
+                 TextColor="White">Hex Color</Label>
+
+        </Grid>
+
+        <Grid>
+
+            <Image Source="squareboard.png"
+                 MaximumHeightRequest="230"
+                 Aspect="AspectFill"
+                 HorizontalOptions="Center"
+                 VerticalOptions="Center"/>
+            <Image Source="gemboard.png"
+                 HeightRequest="100"
+                 Aspect="AspectFill"
+                 HorizontalOptions="Center"
+                 VerticalOptions="Center"
+                 x:Name="gemStones"/>
+
+        </Grid>
+
+        <Grid>
+
+            <Image Source="sliderboard.png"
+                 MaximumHeightRequest="90"
+                 Aspect="AspectFill"
+                 HorizontalOptions="Center"
+                 VerticalOptions="Center"/>
+
+            <Grid>
+                <Slider MinimumTrackColor="Red"
+                      MaximumTrackColor="White"
+                      HorizontalOptions="FillAndExpand"
+                      Margin="0,10,0,0"
+                      MaximumWidthRequest="300"
+                      ThumbImageSource="gemred"
+                      Minimum="0"
+                      Maximum="255"
+                      x:Name="redSlider"
+                      ValueChanged="Slider_ValueChanged"></Slider>
+            </Grid>
+
+        </Grid>
+
+        <Grid>
+
+            <Image Source="sliderboard.png"
+         MaximumHeightRequest="90"
+         Aspect="AspectFill"
+         HorizontalOptions="Center"
+         VerticalOptions="Center"/>
+
+            <Grid>
+                <Slider MinimumTrackColor="Green"
+                      MaximumTrackColor="White"
+                      HorizontalOptions="FillAndExpand"
+                      Margin="0,10,0,0"
+                      MaximumWidthRequest="300"
+                      ThumbImageSource="gemgreen"
+                      Minimum="0"
+                      Maximum="255"
+                      x:Name="greenSlider"
+                      ValueChanged="Slider_ValueChanged"></Slider>
+            </Grid>
+
+        </Grid>
+
+        <Grid>
+
+            <Image Source="sliderboard.png"
+                 MaximumHeightRequest="90"
+                 Aspect="AspectFill"
+                 HorizontalOptions="Center"
+                 VerticalOptions="Center"/>
+
+            <Grid>
+                <Slider MinimumTrackColor="Blue"
+              MaximumTrackColor="White"
+              HorizontalOptions="FillAndExpand"
+              Margin="0,10,0,0"
+              MaximumWidthRequest="300"
+              ThumbImageSource="gemblue"
+              Minimum="0"
+              Maximum="255"
+              x:Name="blueSlider"
+              ValueChanged="Slider_ValueChanged"></Slider>
+            </Grid>
+
+        </Grid>
+
+        <HorizontalStackLayout Margin="0,15,0,0"
+                             HorizontalOptions="Center">
+
+            <Grid>
+
+                <ImageButton Source="lableboard.png"
+                     MaximumHeightRequest="80"
+                           MaximumWidthRequest="170"
+                     Aspect="AspectFill"
+                     HorizontalOptions="Center"
+                     VerticalOptions="Center"
+                           x:Name="random"
+                           Clicked="random_Clicked"/>
+                <Label HorizontalOptions="Center"
+                     VerticalOptions="Center"
+                     FontFamily="MedievalSharp"
+                     FontSize="24"
+                     FontAttributes="Bold"
+                     TextColor="White"
+                     x:Name="hexLabel"></Label>
+
+            </Grid>
+
+            <Grid>
+
+                <ImageButton Source="smallboard.png"
+                     MaximumHeightRequest="80"
+                           MaximumWidthRequest="80"
+                     Aspect="AspectFill"
+                           x:Name="copy"
+                           Clicked="copy_Clicked"
+                     HorizontalOptions="Center"
+                     VerticalOptions="Center"/>
+                <Image Source="copyicon.png"
+                     MaximumHeightRequest="40"
+                     Aspect="AspectFill"
+                     HorizontalOptions="Center"
+                     VerticalOptions="Center"/>
+
+            </Grid>
+
+        </HorizontalStackLayout>
+
+    </VerticalStackLayout>
+
+</ContentPage>
